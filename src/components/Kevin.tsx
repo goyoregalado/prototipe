@@ -5,5 +5,4 @@ export function Kevin (){
         <p>Estudiante de Programacion en la Universidad Tecnologica de Cordoba.</p>
         </>
     )
-    
 }
