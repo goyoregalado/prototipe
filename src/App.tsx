@@ -1,8 +1,6 @@
 import './App.css'
-import { Joaquin } from './components/Joaquin'
-import { Goyo } from './components/Goyo'
-import { Kevin } from './components/Kevin'
 import { PersonalCard } from './components/PersonalCard'
+import { DeviceList } from './components/DeviceList'
 
 function App() {
   const personList = [
@@ -25,9 +23,6 @@ function App() {
     }
   ];
 
-  const holaMundo = (nombre: string) => (nombre)
-
-
   return (
     <>
       <h1>This is the very beginning of SuperApps</h1>
@@ -42,6 +37,8 @@ function App() {
           summary={person.summary}
         />
       ))}
+
+      <DeviceList />
     </>
   )
 }
