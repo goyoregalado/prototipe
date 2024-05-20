@@ -23,36 +23,25 @@ function App() {
       jobPosition: 'Estudiante de Programacion',
       summary: 'Estudiante de Programacion en la Universidad Tecnologica de Cordoba.',
     }
-  ]
+  ];
+
+  const holaMundo = (nombre: string) => (nombre)
+
 
   return (
     <>
       <h1>This is the very beginning of SuperApps</h1>
       <p>Vamos a comenzar el plan de dominación mundial</p>
 
-      <PersonalCard
-        fullName={personList[0].fullName}
-        jobPosition={personList[0].jobPosition}
-        company={personList[0].company}
-        summary={personList[0].summary}
-      />
-
-
-    <PersonalCard
-        fullName={personList[1].fullName}
-        jobPosition={personList[1].jobPosition}
-        company={personList[1].company}
-        summary={personList[1].summary}
-      />
-
-
-    <PersonalCard
-        fullName={personList[2].fullName}
-        jobPosition={personList[2].jobPosition}
-        company={personList[2].company}
-        summary={personList[2].summary}
-      />
-
+      { personList.map((person, index) => (
+        <PersonalCard
+          key={index}
+          fullName={person.fullName}
+          jobPosition={person.jobPosition}
+          company={person.company}
+          summary={person.summary}
+        />
+      ))}
     </>
   )
 }
